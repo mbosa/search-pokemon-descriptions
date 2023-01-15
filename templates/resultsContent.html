@@ -1,0 +1,21 @@
+{{block "content" .}}
+<div>Search again</div>
+<div>{{template "searchInput"}}</div>
+<ul>
+  {{range .Results}}
+  <li class="result-item">
+    <div class="result-id">#{{.Species_id}}</div>
+    <div class="result-pokemon">
+      <div class="result-pokemon-name">
+        <strong><a href="{{.Url}}" target="_blank">{{.Name}}</a></strong>
+      </div>
+      <div class="result-pokemon-img-container">
+        <img src="/static/images/pokemon/{{.Species_id}}.png" alt="{{.Name}}" />
+      </div>
+    </div>
+    <div class="result-description">{{.Description}}</div>
+  </li>
+  {{end}}
+</ul>
+
+{{end}}
