@@ -1,0 +1,123 @@
+:root {
+  /* colors - https://coolors.co/5555ff */
+  --violet: #55f;
+  --white: #edf2f4;
+  --funky: #ff7364;
+  --dark: #42213d;
+  --light: #e4fde1;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+header,
+footer {
+  display: flex;
+  flex-shrink: 0;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: var(--white);
+}
+
+header img.logo {
+  width: 4rem;
+  flex-shrink: 1;
+}
+
+header .header-text {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--violet);
+  font-family: 'Silkscreen', cursive;
+  font-size: 2rem;
+}
+
+footer {
+  justify-content: center;
+}
+
+footer .github-logo {
+  width: 3rem;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.wordcloud {
+  width: 80%;
+}
+
+.result-item {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid black;
+}
+
+.result-item > .result-id,
+.result-item > .result-pokemon > .result-pokemon-name,
+.result-item > .result-pokemon > .result-pokemon-img-container,
+.result-item > .result-description {
+  padding: 10px 20px;
+}
+
+.result-item > .result-id {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid black;
+}
+
+.result-item > .result-pokemon {
+  border-right: 1px solid black;
+}
+
+.result-item > .result-pokemon > .result-pokemon-name {
+  display: flex;
+  justify-content: center;
+}
+
+.result-item > .result-pokemon > .result-pokemon-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.result-item > .result-pokemon > .result-pokemon-img-container > img {
+  width: 100%;
+}
+
+.result-item > .result-description {
+  display: flex;
+  align-items: center;
+}
+
+.search-text {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
